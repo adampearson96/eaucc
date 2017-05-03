@@ -7,7 +7,7 @@
 	<meta property="og:type" content="article" />
 	<meta property="og:url" content="<?php echo the_permalink(); ?>"/>
 	<meta property="og:site_name" content="<?php echo get_bloginfo(); ?>"/>
-	<meta property="og:image" content="http://eaucc.co.uk/wp-content/uploads/2017/05/eaucc-og-meta.png"/>
+	<meta property="og:image" content="http://eaucc.co.uk/wp-content/uploads/2017/05/eaucc-og-meta-3.png"/>
 	<meta property="og:description" content="" />
 	<title><?php echo get_bloginfo( 'name' ); ?></title>
 	<?php wp_head(); ?>
