@@ -15,17 +15,17 @@
 <body <?php body_class(); ?>>
 <header class="container-fluid">
 	<div class="row">
-		<div class="col-xs-10 col-sm-7" id="logo">
+		<div class="col-xs-10 col-sm-10" id="logo">
 			<?php if ( function_exists( 'the_custom_logo' ) )
 			{
 				the_custom_logo();
 			} ?>
 			<h1 id="site-title"><a href="<?php echo get_bloginfo( 'url' ); ?>"><?php echo get_bloginfo( 'name' ); ?></a></h1>
 		</div>
-		<div class="col-xs-3" id="searchform">
+		<div class="col-xs-2" id="searchform">
 			<?php echo get_search_form(); ?>
 		</div>
-		<div class="col-xs-2" id="navigation">
+		<div class="col-xs-2 col-sm-12" id="navigation">
 		<a class="toggle-mobile-menu">
 			<i class="mobile-menu-icon fa fa-bars"></i>
 		</a>

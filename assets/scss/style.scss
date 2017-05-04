@@ -461,54 +461,146 @@ footer {
 }
 
 @media only screen and (min-width : 768px) {
-	header {
-		h1#site-title {
-			font-size: 18px;
-			font-weight: 300;
-		}
-		#searchform {
-			display: block;
-			text-align: right;
-			padding-top: 8px;
-			padding-bottom: 8px;
+	body {
+		margin: 0!important;
+		
+		header {
+			position: relative;
 
-			#search-form {
-				input {
-					border: 2px solid $fourth-colour;
+			h1#site-title {
+				font-size: 18px;
+				font-weight: 300;
+			}
+			#searchform {
+				display: block;
+				text-align: right;
+				padding-top: 8px;
+				padding-bottom: 8px;
+
+				#search-form {
+					input {
+						border: 2px solid $fourth-colour;
+						padding: $standard-padding;
+					}
+				}
+			}
+			#navigation {
+				a.toggle-mobile-menu {
+					display: none;
+				}
+				
+				ul#menu-primary {
+					display: block;
+					left: 0;
+					top: 0;
+					position: relative;;
+					list-style-type: none;
 					padding: $standard-padding;
+					background: $primary-colour;
+					overflow-y: inherit;
+					text-align: right;
+					font-size: 18px;
+
+					li.menu-item-has-children > a:after {
+						content: "\f0da";
+						font-family: 'fontAwesome';
+						float: none;
+						padding: 0 10px;
+					}
+				
+					li.menu-item-has-children:hover > a:after {
+						content: "\f0d7";
+						font-family: 'fontAwesome';
+						float: none;
+						padding: 0 10px;
+
+					}
+
+					li.menu-item-has-children:hover a {
+						border-bottom-left-radius: 0;
+						border-bottom-right-radius: 0;
+					}
+					li {
+						display: inline-block;
+					}
+					li a {
+						display: block;
+						padding: $standard-padding;
+						text-decoration: none;
+						color: $white;
+					}
+				
+					li:hover a {
+						background: $secondary-colour;
+						border-radius: $border-radius;
+						color: $fourth-colour;
+					}
+
+					li:hover > ul.sub-menu {
+						display: block;
+						padding: 0;
+						list-style-type: none;
+					}
+
+					li ul.sub-menu {
+						display: none;
+						position: absolute;
+
+						li {
+							display: block;
+							a {
+								border-radius: 0;
+
+								&:hover {
+									background-color: $tertiary-colour;
+								}
+							}
+							&:last-child > a {
+								border-bottom-left-radius: $border-radius;
+								border-bottom-right-radius: $border-radius;
+							}
+						}
+					}
+					li ul.sub-menu li:hover > ul.sub-menu {
+						display: block;
+						left: 100%;
+						position: absolute;
+						top: 0;
+						width: 100%;
+					}
 				}
 			}
 		}
-	}
-	#club-vision-and-ethos {
-		#content {
-			padding-left: 50px;
-			padding-right: 50px;
-			
-			p {
-				padding: 15px; 
+		#club-vision-and-ethos {
+			#content {
+				padding-left: 50px;
+				padding-right: 50px;
+				
+				p {
+					padding: 15px; 
+				}
 			}
 		}
-	}
-	#our-sponsors {
-		#sponsors-list {
-			ul {
-				li {
-					display: inline-block;
-					
-					a {
-						img {
-							max-width: 100%;
+		#our-sponsors {
+			#sponsors-list {
+				ul {
+					li {
+						display: inline-block;
+						
+						a {
+							img {
+								max-width: 100%;
+							}
 						}
 					}
 				}
 			}
 		}
-	}
-	footer {
-		#contact-details,
-		#useful-links {
-			text-align: left;
+		footer {
+			#contact-details,
+			#useful-links {
+				text-align: left;
+			}
 		}
 	}
 }
